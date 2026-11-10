@@ -1,0 +1,97 @@
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# ChromaDB databases
+chroma_db/
+backend/chroma_db/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploaded documents
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Document registry (local data)
+backend/document_registry.json
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+logs/
+
+# Editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+```
+
+## 3. Keep these important files
+
+Your GitHub repository should contain approximately this structure:
+
+<CodeBlock language="text">
+Local-AI-Knowledge-Assistant/
+│
+├── backend/
+│   ├── embeddings/
+│   │   └── embedding_model.py
+│   ├── ingestion/
+│   │   ├── pdf_loader.py
+│   │   ├── text_splitter.py
+│   │   └── ...
+│   ├── rag/
+│   │   ├── generator.py
+│   │   ├── retriever.py
+│   │   └── test_rag.py
+│   ├── services/
+│   ├── vectorstore/
+│   │   └── chroma_db.py
+│   ├── database.py
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── package-lock.json
+│   └── index.html
+│
+├── .gitignore
+└── README.md
