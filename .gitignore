@@ -95,3 +95,4 @@ Local-AI-Knowledge-Assistant/
 │
 ├── .gitignore
 └── README.md
+chroma_db_backup/
